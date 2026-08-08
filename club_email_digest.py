@@ -49,8 +49,8 @@ import anthropic
 # with whatever credentials that source needs (API key, OAuth token, etc.).
 # DISCORD_WEBHOOK and ANTHROPIC_KEY stay the same regardless of source.
 
-GMAIL_ADDRESS    = os.environ.get("CLUB_GMAIL_ADDRESS")
-GMAIL_PASSWORD   = os.environ.get("CLUB_GMAIL_APP_PASSWORD")
+GMAIL_ADDRESS    = os.environ.get("CLUB_GMAIL_ADDRESS").strip() # adding to ensure no accidental whitespace/newlines
+GMAIL_PASSWORD   = os.environ.get("CLUB_GMAIL_APP_PASSWORD").strip()
 DISCORD_WEBHOOK  = os.environ.get("DISCORD_WEBHOOK_URL")
 ANTHROPIC_KEY    = os.environ.get("ANTHROPIC_API_KEY")
 
